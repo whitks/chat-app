@@ -6,6 +6,6 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 @app.route('/')
 def home():
-    return "Done"
+    return render_template("index.html")
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app, debug=True)
